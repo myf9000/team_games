@@ -1,5 +1,6 @@
 require "sinatra/base"
 require "sinatra/activerecord"
+require "sinatra/contrib"
 
 module Teams
   module Routes
@@ -11,6 +12,8 @@ module Teams
   end
 
   class App < Sinatra::Base
+    register Sinatra::Contrib
+
     use Teams::Routes::Team
   end
 end
