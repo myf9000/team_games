@@ -1,2 +1,6 @@
-class Teams::Models::Team < ActiveRecord::Base
+module Teams
+  module Models
+    class Team < ActiveRecord::Base
+    end
+  end
 end

@@ -1,13 +1,13 @@
 class Teams::Routes::Team < Sinatra::Base
   register Sinatra::Namespace
 
-  namespace "/api/v1" do
-    helpers do
-      def team
-        Team.find(params[:id])
-      end
+  helpers do
+    def team
+      Team.find(params[:id])
     end
+  end
 
+  namespace "/api/v1" do
     get "/teams" do
       json Team.all
     end
